@@ -1,93 +1,56 @@
 * {
-box-sizing: border-box;
-font-family: "Nunito", sans-serif;
-line-height: 1.5rem;
-color: #fff;
+    box-sizing: border-box;
 }
 
-nav {
-    background-color: #000000;
-    color: lavender;
-    grid-column: 1 / -1;
-    grid-row: 1;
-    margin: 0;
-  }
-  
-nav h1 {
-    display: flex;
-    justify-self: start;
-    color: #ffffff;
-}
-
-nav ul {
-list-style: none;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: end;
-padding: 2rem 1rem;
-margin: 0;
-color: lavender;
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+    /*color: #fff;*/
+    /*background-color: #7251B5;*/
+    margin: 0;     /*this makes the menu extend to the edges of the page*/
 }
 
 .wrapper {
     max-width: 1200px;
-    background-color: rgb(99, 70, 180);
+    margin: 0 auto; /* tells code to center page */
+    padding: 0 2em;
 }
 
-.banner {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "banner";
+#company-name {
+    color: #DEC9E9;
     font-size: 1.5rem;
-  }
-  
-  .banner img {
-    grid-area: banner;
-    width: 100%;
-  }
-  
-  .banner div {
-    grid-area: banner;
-    align-self: center;
-    justify-self: center;
-    text-align: center;
-  }
+}
 
-  h2 {
-    background-color: none;
-  }
+#intro,
+#fan-fav,
+#team {
+padding: 4em 0;
+}
 
-  .favourites {
+#header {
     background-color: black;
-    color: lavender;
-  }
+}
 
-  section ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1rem;
-    align-items: center;
-  }
-  
-  section ul li {
-    border: 2px none;
-    border-radius: 6px;
-    background-color: rgb(50, 28, 107);
-    display: grid;
-    grid-template-rows: .5fr 1fr .7fr;
-  }
+nav ul{
+list-style: none;
+padding-left: 0; /*space before list items is none*/
+}
 
-  section ul li img {
-    width: 4em;
-    height: 4em;
-    align-items: center;
-  }
+nav ul li a:visited,
+nav ul li a:link {
+    text-decoration: none;  /*gets rid of underline*/
+    color: #DEC9E9;
+}
 
-main {
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #fff;
+}
+
+#hero-banner {
+    height: 60vh;
+    background-color: #7251B5; /*add this in case the background image does not load*/
+    background-image: url(../images/ice-cream-cones.jpg);
+    background-size: cover;
+    background-position: center;
 }
