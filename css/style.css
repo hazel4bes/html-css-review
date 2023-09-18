@@ -5,7 +5,7 @@
 body {
     font-family: 'Nunito', sans-serif;
     line-height: 1.5;
-    /*color: #fff;*/
+    color: #fff;
     /*background-color: #7251B5;*/
     margin: 0;     /*this makes the menu extend to the edges of the page*/
 }
@@ -31,9 +31,20 @@ padding: 4em 0;
     background-color: black;
 }
 
-nav ul{
+#header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
 list-style: none;
 padding-left: 0; /*space before list items is none*/
+display: flex;
+}
+
+nav ul li {
+padding-left: 1.125em;
 }
 
 nav ul li a:visited,
@@ -53,4 +64,82 @@ nav ul li a:focus {
     background-image: url(../images/ice-cream-cones.jpg);
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+
+}
+
+#intro {
+    background-color: #7251B5;
+}
+
+#intro p {
+max-width: 50%;
+}
+
+#fan-fav {
+    background-color: #000;
+    color: #DEC9E9;
+}
+
+#fan-fav ol {
+    list-style: none;
+    padding: 0;     /*Aligns with title*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#fan-fav li {
+    width: 50%; /*combined with flex-wrap: wrap; it tells the items to go onto next line if it doesn not fit*/
+    padding-right: 15%;
+}
+
+#team {
+    background-color: #7251B5;
+
+}
+
+#team h2 {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#team .team-intro {
+    max-width: 40%;
+    margin: 0 auto; /*this centers the text*/
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*fr=fractional unit. this tells webpage to divide grid into two fractions, or columns*/
+    gap: 1em;
+    margin-top: 2.5em;
+}
+
+.team-grid article {
+    background-color: #6647A6;
+    border-radius: 20px;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.team-grid article img {
+    filter: grayscale(100%); /*in brackets --> how greyscale it is*/
+    border-radius: 50%;
+    width: 80px;
+}
+
+.team-grid h3 {
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 1em 0;
 }
